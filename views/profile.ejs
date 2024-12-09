@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+
+<body>
+    
+<header>
+    <h1>Welcome, <%= user.username %>!</h1>
+</header>
+<main>
+    <section>
+        <h2>Your Profile</h2>
+        <ul>
+            <li><strong>Username:</strong>
+                <%= user.username %>
+            </li>
+            <% if (user.email) { %>
+                <li><strong>Email:</strong>
+                    <%= user.email %>
+                </li>
+                <% } %>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Actions</h3>
+        <ul>
+            <li><a href="publicChat">Go to Public Chat</a></li>
+            <li><a href="privateChat">Go to Private Chat Chat</a></li>
+            <li><a href="profile">Logout</a></li>
+        </ul>
+    </section>
+</main>
+<footer>
+    <p>&copy; G19 Programs 2024</p>
+
+</footer></body></html>
